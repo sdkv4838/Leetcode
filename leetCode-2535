@@ -1,0 +1,12 @@
+function differenceOfSum(nums: number[]): number {
+    let totalSum=nums.reduce((val,tot)=>val+=tot,0);
+    let rem,sum=0
+   for(let i of nums){
+    while(i>0){
+    rem=i%10
+    sum+=rem
+    i=Math.floor(i/10)  
+}
+   }
+return Math.abs(totalSum-sum)
+};
