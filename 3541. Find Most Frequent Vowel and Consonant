@@ -1,0 +1,20 @@
+function maxFreqSum(s: string): number {
+    let obj={},v=0,c=0,strArr=s.split('');
+    for(let i=0;i<strArr.length;i++){
+        if(obj[strArr[i]]){
+            obj[strArr[i]]++;
+        }
+        else{
+            obj[strArr[i]]=1
+        }
+    }
+    for (let ch in obj) {
+        if ("aeiou".includes(ch)){
+            v=Math.max(v,obj[ch])
+        }
+        else{
+                c=Math.max(c,obj[ch])
+        }
+    }
+    return v+c;
+};
