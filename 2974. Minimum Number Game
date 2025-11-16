@@ -1,0 +1,11 @@
+function numberGame(nums: number[]): number[] {
+       const arr = [];
+       let alice,bob;
+    nums.sort((a,b) => a - b);
+    while (nums.length > 0){
+         alice = nums.shift();
+         bob = nums.shift();
+        arr.push(bob,alice);
+    } 
+    return arr
+}
