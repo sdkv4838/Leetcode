@@ -1,0 +1,12 @@
+function kidsWithCandies(candies: number[], extraCandies: number): boolean[] {
+    let arr=[]
+        for(let i=0;i<candies.length;i++){
+        if(candies[i]+extraCandies>=Math.max(...candies)){
+            arr.push(true)
+        }
+    else{
+        arr.push(false)
+    }
+        } 
+    return arr
+};
